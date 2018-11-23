@@ -70,7 +70,7 @@ void loop() {
   handleSerialInput();
   windowHandler();
   
-  if(colorValue != 0)
+  if(colorValue > 0)
   {
     setColor(colorValue);
     }
@@ -106,11 +106,14 @@ void handleSerialInput() {
       break;
 
       case 'e':
-      digitalWrite(bedroom2,HIGH);
+      digitalWrite(red,HIGH);
+      
+    
       Serial.println("bedrrom2 on"); 
       break;
     case 'f':
      digitalWrite(bedroom2,LOW);
+   
      Serial.println("bedrrom2 off");
       break;
 
